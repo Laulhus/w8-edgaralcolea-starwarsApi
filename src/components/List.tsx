@@ -1,7 +1,15 @@
-import ListProps from "../interfaces/ListProps";
+import StarShipList from "../interfaces/StarShipsList";
 
-const List = (starShips: ListProps | undefined): JSX.Element => {
-  return <p>{starShips?.results[0].class}</p>;
+export interface ListProps {
+  starShipsList: StarShipList | undefined;
+}
+
+export const List = ({ starShipsList }: ListProps): JSX.Element => {
+  return (
+    <ul>
+      {starShipsList?.results.map((starShip) => (
+        <p key={starShip.starship_class}>{starShip.starship_class}</p>
+      ))}
+    </ul>
+  );
 };
-
-export default List;
