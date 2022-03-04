@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import List from "./components/List";
 import ListProps from "./interfaces/ListProps";
 
 function App() {
