@@ -1,8 +1,8 @@
 import Starship from "./Starship";
 
-interface ListProps {
+interface StarShipList {
   count: number;
   results: Starship[];
 }
 
-export default ListProps;
+export default StarShipList;
